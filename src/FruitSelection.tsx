@@ -8,31 +8,42 @@ interface FruitSelectionState{
 }
 const fruits =['Apple', 'Orange', 'Banana', 'Grape','Kiwi','Mango', 'Pear','Pineapple' ];
 const FruitSelection:React.FC = () => {
+    const [searchTerm, setsearchTerm] = useState<string>('');
     const [selectedFruit, setselectedFruit] = useState<string>('Choose a fruit');
-   /* const handleSelect = (fruit:string) =>{
+   const handleSelect = (fruit:string) =>{
         setselectedFruit(fruit);
+        setsearchTerm(''); //clear the search term when an item is selected
     };
-    const filterFruits = (input:string):string[] => {
-        return fruits.filter((fruit) => 
-        fruit.includes(input));
-        
-    };*/
+    const filterFruits = fruits.filter((fruit) => {
+        if(!searchTerm){
+            return true;
 
-    const handleChange = (e:React.ChangeEvent<HTMLSelectElement>) => {
+        }
+        return fruit.includes(searchTerm);
+        
+    })
+
+    const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
         setselectedFruit(e.target.value);
     };
 
     return(
         <div>
             <h2>Choose a fruit </h2>
-            <select value={selectedFruit} onChange={handleChange}>
-                <option value="Choose a fruit">Choose a Fruit</option>
-                {fruits.map((fruit) => (
-                    <option key={fruit} value={fruit}>{fruit}</option>
-                ))}
-
-            </select>
-           {selectedFruit ! == 'Choose a fruit' && <p>Item Selected {selectedFruit}</p>}
+            <input
+            type = "text"
+            placeholder="Search for a fruit ..."
+            list="fruits"
+            value={selectedFruit}
+            onChange={handleChange}
+            />
+            <datalist id="fruits"> 
+            {fruits.map((fruit) => (
+                <option key={fruit} value={fruit} />
+            ))}
+            </datalist>
+            {selectedFruit && <p>Item Selected is {selectedFruit}</p>}
+           
         </div>
     );
 };
