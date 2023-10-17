@@ -6,18 +6,17 @@
 - User can select a fruit from the filtered list.
 - Selected fruit is displayed.
 
-## Installation
 
 To run the FruitSelection application locally, follow these steps:
 
-# Clone the repository:
+1. Clone the repository:
 
 ``` git clone https://github.com/divyamuvi89/microsoft-compo-box.git ```
 ``` cd microsoft-compo-box ```
 
 
 
-# Start the development server and open the application in your browser:
+2.Start the development server and open the application in your browser:
 
 ``` yarn start```
 
