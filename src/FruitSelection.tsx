@@ -1,38 +1,21 @@
-import React, {ChangeEvent, useState} from "react";
+import React, {useState} from "react";
+import './FruitSelection.css';
 
-interface FruitSelectionComboBoxProps{
-
-}
-interface FruitSelectionState{
-
-}
 const fruits =['Apple', 'Orange', 'Banana', 'Grape','Kiwi','Mango', 'Pear','Pineapple' ];
 const FruitSelection:React.FC = () => {
-    const [searchTerm, setsearchTerm] = useState<string>('');
     const [selectedFruit, setselectedFruit] = useState<string>('');
-   const handleSelect = (fruit:string) =>{
-        setselectedFruit(fruit);
-        setsearchTerm(''); //clear the search term when an item is selected
-    };
-    const filterFruits = fruits.filter((fruit) => {
-        if(!searchTerm){
-            return true;
-
-        }
-        return fruit.includes(searchTerm);
-        
-    })
 
     const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
         setselectedFruit(e.target.value);
     };
 
     return(
-        <div>
+        <div className="fruit-selection-container">
             <h2>Choose a fruit </h2>
             <input
+            className="fruit-input"
             type = "text"
-            placeholder="Search for a fruit ..."
+            placeholder="Search for a fruit...."
             list="fruits"
             value={selectedFruit}
             onChange={handleChange}
@@ -42,7 +25,7 @@ const FruitSelection:React.FC = () => {
                 <option key={fruit} value={fruit} />
             ))}
             </datalist>
-            {selectedFruit && <p>Item Selected is {selectedFruit}</p>}
+            {selectedFruit && <p className="selected-fruit">Item Selected is {selectedFruit}</p>}
            
         </div>
     );
