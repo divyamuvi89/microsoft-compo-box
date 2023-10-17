@@ -1,55 +1,85 @@
-.fruit-selection-container {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+body {
+    font-family: Verdana, sans-serif; /* Use Verdana font family */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .fruit-selection-container {
+    text-align: center;
     margin-top: 50px;
-}
-.custom-dropdown{
     display: flex;
-    width: 300px;
-    border:2px solid blue;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
-}
-.fruit-input {
-    width: 300px;
-    height: 30px;
-    font-size: 16px;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid blue;
-    border-radius: 5px;
+    font-family: Verdana, sans-serif; /* Apply Verdana font to the container */
+  }
+  
+  .custom-dropdown {
     position: relative;
-}
-.selected-fruit{
+    display: inline-block;
+    margin-top: 20px;
+    width: 250px;
+  }
+  
+  .fruit-input {
+    padding: 10px;
     font-size: 16px;
-    color:blue;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+    font-family: Verdana, sans-serif; /* Apply Verdana font to the input */
+    font-weight: bold; /* Make the text bold */
+  }
+  .fruit-input::after {
+    content: "▼"; 
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: blue;
+  }
+  
+  
+  .fruit-input:focus {
+    border-color: #3498db; /* Highlight border color on focus */
+  }
+  
+  .dropdown-header {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    font-weight: bold; /* Make the text bold */
+  }
+  
+  .dropdown-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #3498db;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-list li {
+    padding: 10px;
+    transition: background-color 0.3s;
+    font-family: Verdana, sans-serif; /* Apply Verdana font to the list items */
+  }
+  
+  .dropdown-list li:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .selected-fruit {
+    font-weight: bold;
     margin-top: 10px;
-}
-datalist option{
-    font-size: 16px;
-    background-color: aliceblue;
-    border: 1px solid blue;
-    border-radius: 5px;
-    color: black;
-}
-.options{
-    position:absolute;
-    width: 50%;
-    background-color: aliceblue;
-    border:1px solid #ccc;
-    border-top:none;
-}
-datalist{
-    position:absolute;
-    top: 100%;
-    left:0;
-    width:200px;
-    margin-top:5px;
-    border:1px solid blue;
-    border-radius: 5px;
-    background-color: aliceblue;
-    z-index: 1;
-
-}
+  }
+  

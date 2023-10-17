@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders FruitSelection component correctly 1`] = `
+<div
+  className="fruit-selection-container"
+>
+  <h2>
+    Choose a fruit 
+  </h2>
+  <div
+    className="custom-dropdown"
+  >
+    <input
+      className="fruit-input"
+      list="fruits"
+      onChange={[Function]}
+      onClick={[Function]}
+      placeholder="Search for a fruit...."
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
