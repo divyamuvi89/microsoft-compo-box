@@ -18,25 +18,20 @@ const FruitSelection = () => {
         
     };
 
-    const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
-        handleSelect(filterFruits(e.target.value)[0]);
+    const handleChange = (e:React.ChangeEvent<HTMLSelectElement>) => {
+        setselectedFruit(e.target.value);
     };
 
     return(
         <div>
-            <h2>Choose a fruit:</h2>
-            <input 
-            type = "text"
-            placeholder="Enter your Selection"
-            onChange={handleChange}
-            
-            />
-            <ul>
-                {filterFruits(selectedFruit || '').map((fruit) => (
-                    <li key={fruit} onClick={()=> handleSelect(fruit)}>{fruit}</li>
+            <h2>Choose a fruit </h2>
+            <select value={selectedFruit} onChange={handleChange}>
+                {fruits.map((fruit) => (
+                    <option key={fruit} value={fruit}>{fruit}</option>
                 ))}
-            </ul>
-            {selectedFruit !=='Choose a fruit' && <p>Item Selected: {selectedFruit}</p>}
+
+            </select>
+            {selectedFruit ! == 'Choose a fruit' && <p>Item Selected {selectedFruit}</p>}
         </div>
     );
 };
