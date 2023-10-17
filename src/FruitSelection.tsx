@@ -9,7 +9,7 @@ interface FruitSelectionState{
 const fruits =['Apple', 'Orange', 'Banana', 'Grape','Kiwi','Mango', 'Pear','Pineapple' ];
 const FruitSelection:React.FC = () => {
     const [searchTerm, setsearchTerm] = useState<string>('');
-    const [selectedFruit, setselectedFruit] = useState<string>('Choose a fruit');
+    const [selectedFruit, setselectedFruit] = useState<string>('');
    const handleSelect = (fruit:string) =>{
         setselectedFruit(fruit);
         setsearchTerm(''); //clear the search term when an item is selected
