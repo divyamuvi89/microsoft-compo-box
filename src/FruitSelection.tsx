@@ -12,6 +12,7 @@ const FruitSelection:React.FC = () => {
     return(
         <div className="fruit-selection-container">
             <h2>Choose a fruit </h2>
+            {selectedFruit && <p className="selected-fruit">Item Selected</p>}
             <input
             className="fruit-input"
             type = "text"
@@ -20,12 +21,14 @@ const FruitSelection:React.FC = () => {
             value={selectedFruit}
             onChange={handleChange}
             />
+            
             <datalist id="fruits"> 
             {fruits.map((fruit) => (
                 <option key={fruit} value={fruit} />
             ))}
             </datalist>
-            {selectedFruit && <p className="selected-fruit">Item Selected is {selectedFruit}</p>}
+            
+            
            
         </div>
     );

@@ -22,6 +22,8 @@
 datalist option{
     font-size: 16px;
     background-color: aliceblue;
+    border: 1px solid blue;
+    border-radius: 5px;
     color: black;
 }
 datalist{
