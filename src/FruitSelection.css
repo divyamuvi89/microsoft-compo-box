@@ -2,13 +2,21 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 50px;
+}
+.custom-dropdown{
+    display: flex;
+    width: 300px;
+    border:2px solid blue;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
 }
 .fruit-input {
-    width: 200px;
+    width: 300px;
     height: 30px;
     font-size: 16px;
-    padding: 5px;
+    padding: 10px;
     margin-top: 10px;
     border: 1px solid blue;
     border-radius: 5px;
@@ -25,6 +33,13 @@ datalist option{
     border: 1px solid blue;
     border-radius: 5px;
     color: black;
+}
+.options{
+    position:absolute;
+    width: 50%;
+    background-color: aliceblue;
+    border:1px solid #ccc;
+    border-top:none;
 }
 datalist{
     position:absolute;
