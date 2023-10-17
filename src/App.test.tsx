@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders App component', () => {
   render(<App />);
-  const headerElement = screen.getByText(/Choose a fruit/i); // Match the actual text in your component
+  const headerElement = screen.getByText(/Choose a fruit/i); 
   expect(headerElement).toBeInTheDocument();
 });
