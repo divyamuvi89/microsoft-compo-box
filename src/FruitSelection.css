@@ -17,14 +17,14 @@ body {
     position: relative;
     display: inline-block;
     margin-top: 20px;
-    width: 250px;
+    width: 350px;
   }
   
   .fruit-input {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    width: 100%;
+    width: 350px;
     box-sizing: border-box;
     outline: none;
     transition: border-color 0.3s;
@@ -51,7 +51,7 @@ body {
     color: white;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    width: 350px;
     text-align: center;
     font-weight: bold; 
   }
@@ -65,7 +65,7 @@ body {
     position: absolute;
     background-color: #fff;
     border: 1px solid #3498db;
-    width: 100%;
+    width: 350px;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
