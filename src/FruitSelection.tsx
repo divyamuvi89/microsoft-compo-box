@@ -1,7 +1,40 @@
 import React, {useState} from "react";
 import './FruitSelection.css';
 
-const fruits =['Apple', 'Orange', 'Banana', 'Grape','Kiwi','Mango', 'Pear','Pineapple' ];
+const fruits = [
+    'Apple',
+    'Orange',
+    'Banana',
+    'Grape',
+    'Kiwi',
+    'Mango',
+    'Pear',
+    'Pineapple',
+    'Strawberry',
+    'Blueberry',
+    'Raspberry',
+    'Blackberry',
+    'Cherry',
+    'Watermelon',
+    'Peach',
+    'Plum',
+    'Lemon',
+    'Lime',
+    'Coconut',
+    'Pomegranate',
+    'Cantaloupe',
+    'Honeydew',
+    'Fig',
+    'Guava',
+    'Apricot',
+    'Nectarine',
+    'Passion Fruit',
+    'Dragon Fruit',
+    'Papaya',
+    'Lychee',
+    'Avocado'
+];
+
 const FruitSelection:React.FC = () => {
     const [selectedFruit, setselectedFruit] = useState<string>('');
     const [filteredFruits, setfilteredFruits] = useState<string[]>(fruits)
