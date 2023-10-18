@@ -10,7 +10,7 @@ const FruitSelection:React.FC = () => {
     const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
         const searchValue = e.target.value;
         setselectedFruit(searchValue);
-        const filtered = fruits.filter(fruit => fruit.includes(searchValue));
+        const filtered = fruits.filter(fruit => fruit.toLowerCase().includes(searchValue.toLowerCase()));
         setfilteredFruits(filtered);
     };
     const handleSelect = (fruit:string) =>{
