@@ -2,15 +2,15 @@ import React, {useState} from "react";
 import './FruitSelection.css';
 
 const fruits = [
-    'Apple',
-    'Orange',
-    'Banana',
-    'Grape',
-    'Kiwi',
-    'Mango',
-    'Pear',
+    '🍏 Apple',
+    '🍊 Orange',
+    '🍌 Banana',
+    '🍇 Grape',
+    '🥝 Kiwi',
+    '🥭 Mango',
+    '🍈 Pear',
     'Pineapple',
-    'Strawberry',
+    '🍓 Strawberry',
     'Blueberry',
     'Raspberry',
     'Blackberry',
