@@ -9,7 +9,7 @@ const fruits = [
     '🥝 Kiwi',
     '🥭 Mango',
     '🍈 Pear',
-    'Pineapple',
+    '🍍 Pineapple',
     '🍓 Strawberry',
     'Blueberry',
     'Raspberry',
