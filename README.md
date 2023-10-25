@@ -24,8 +24,8 @@ To run the FruitSelection application locally, follow these steps:
 
 ``` yarn test```
 
-Used Emojis for images. 
-```<img width="858" alt="image" src="https://github.com/divyamuvi89/microsoft-compo-box/assets/141968187/91b90031-a11d-4357-8f24-8ffb69da0950">```
+##### Used Emojis for images. 
+
 
 
 
