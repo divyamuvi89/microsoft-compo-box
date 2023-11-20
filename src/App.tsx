@@ -6,7 +6,7 @@ import FruitSelectionComboBox from './FruitSelection';
 const App:React.FC = () => {
   return (
     <div className="App">
-      <FruitSelectionComboBox />
+      <FruitSelectionComboBox   />
     </div>
   );
 }
